@@ -49,7 +49,7 @@ class FirstSuccess extends StatelessWidget {
                 OnboardingDscription(
                     "Your stock purchase was"),
                 OnboardingDscription(
-                    " successful!"),
+                    "successful!"),
                 SizedBox(
                   height: SizeConfig.screenwidth * 0.2,
                 ),

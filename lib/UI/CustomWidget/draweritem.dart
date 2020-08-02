@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../sizeconfig.dart';
 
-Widget DrawerItem(IconData icon, String name){
+Widget DrawerItem(IconData icon, String name,Function onPressed){
   return Container(
       height: SizeConfig.safeBlockVertical*5.5,
       width: SizeConfig.screenwidth,
@@ -15,7 +15,7 @@ Widget DrawerItem(IconData icon, String name){
           color: Colors.transparent,
           borderRadius: BorderRadius.all(Radius.circular(5)),
           child: InkWell(
-            onTap: (){},
+            onTap: onPressed,
             splashColor: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(5)),
             child: Center(

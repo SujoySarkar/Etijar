@@ -101,22 +101,12 @@ class BuyStocks extends StatelessWidget {
                             color: Colors.transparent,
                             borderRadius: BorderRadius.all(Radius.circular(5)),
                           ),
-                          child: Material(
-                              color: Colors.transparent,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(5)),
-                              child: InkWell(
-                                onTap: () {},
-                                splashColor: Colors.transparent,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(5)),
-                                child: Align(
-                                    alignment: Alignment.centerRight,
-                                    child: Icon(
-                                      Icons.favorite_border,
-                                      color: Colors.white,
-                                    )),
-                              ))),
+                          child: Align(
+                              alignment: Alignment.centerRight,
+                              child: Icon(
+                                Icons.favorite_border,
+                                color: Colors.white,
+                              )),),
                     ],
                   ),
                   SizedBox(

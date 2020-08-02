@@ -2,6 +2,10 @@ import 'package:etijar/UI/CustomWidget/draweritem.dart';
 import 'package:etijar/UI/CustomWidget/reusableCategories.dart';
 import 'package:etijar/UI/CustomWidget/reusableStocks.dart';
 import 'package:etijar/UI/Dashboard/details.dart';
+import 'package:etijar/UI/NavigationDrawer/beneficiaries.dart';
+import 'package:etijar/UI/NavigationDrawer/investmentportfollio.dart';
+import 'package:etijar/UI/NavigationDrawer/notifications.dart';
+import 'package:etijar/UI/NavigationDrawer/watchlistempty.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -42,17 +46,29 @@ class DashBoard extends StatelessWidget {
                 SizedBox(height: space_between_title_textField,),
                 Text("Menu",style: TextStyle(color: Color(0xFF8692A6),fontWeight: FontWeight.w600,fontSize: SizeConfig.screenwidth*0.036),),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.home,"Home"),
+                DrawerItem(Icons.home,"Home",(){Navigator.push(context, CupertinoPageRoute(builder: (context)=>DashBoard()));},),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.rss_feed,"Investment Portfolio"),
+                DrawerItem(Icons.rss_feed,"Investment Portfolio",(){
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>InvestmentPortfollio()));
+
+                }),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.lightbulb_outline,"My Savings"),
+                DrawerItem(Icons.lightbulb_outline,"My Savings",(){
+
+                }),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.card_travel,"Loans (Quad Hasn & Mudabarah)"),
+                DrawerItem(Icons.card_travel,"Loans (Quad Hasn & Mudabarah)",(){}),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.notifications_none,"Notifications"),
+                DrawerItem(Icons.notifications_none,"Notifications",(){
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>Notifications()));
+                }),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.favorite_border,"Watchhlist"),
+                DrawerItem(Icons.favorite_border,"Watchhlist",(){
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>Watchlist()));
+                }),
                 SizedBox(height: space_between_title_textField,),
                 Divider(
                   color: Color(0xFF8692A6),
@@ -60,13 +76,16 @@ class DashBoard extends StatelessWidget {
                 SizedBox(height: space_between_title_textField,),
                 Text("My Account",style: TextStyle(color: Color(0xFF8692A6),fontWeight: FontWeight.w600,fontSize: SizeConfig.screenwidth*0.036),),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.security,"Security"),
+                DrawerItem(Icons.security,"Security",(){}),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.credit_card,"Cards & Banks"),
+                DrawerItem(Icons.credit_card,"Cards & Banks",(){}),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.people_outline,"Beneficiaries"),
+                DrawerItem(Icons.people_outline,"Beneficiaries",(){
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>Beneficiaries()));
+                }),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.headset_mic,"Help & Support"),
+                DrawerItem(Icons.headset_mic,"Help & Support",(){}),
                 SizedBox(height: SizeConfig.screenwidth*0.1,),
 
                 Text("eTijar V.1.0.0",style: TextStyle(color: Color(0xFF8692A6),fontWeight: FontWeight.w600,fontSize: SizeConfig.screenwidth*0.036),),
@@ -88,7 +107,7 @@ class DashBoard extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Text("Home"),
+        title: Text("Home",style: TextStyle(fontSize: SizeConfig.screenwidth*0.045)),
         actions: <Widget>[
           IconButton(icon: Icon(Icons.search), onPressed: (){})
         ],

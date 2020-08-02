@@ -71,6 +71,11 @@ flutter:
     - images/infoimgtwo.png
     - images/gp.png
     - images/successone.png
+    - images/circlechart.png
+    - images/apple.png
+    - images/netflix.png
+    - images/fb.png
+    - images/watchlist.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
