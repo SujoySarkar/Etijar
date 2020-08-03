@@ -93,7 +93,7 @@ class LoginPage extends StatelessWidget {
                     height: SizeConfig.screenwidth*0.15,
                   ),
                   CustomButton("Sign In", (){
-                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>DashBoard()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>DashBoard()));
                   }),
                   SizedBox(
                     height: SizeConfig.screenwidth*0.06,

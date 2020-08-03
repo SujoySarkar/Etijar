@@ -3,8 +3,10 @@ import 'package:etijar/UI/CustomWidget/reusableCategories.dart';
 import 'package:etijar/UI/CustomWidget/reusableStocks.dart';
 import 'package:etijar/UI/Dashboard/details.dart';
 import 'package:etijar/UI/NavigationDrawer/beneficiaries.dart';
+import 'package:etijar/UI/NavigationDrawer/cardsbanks.dart';
 import 'package:etijar/UI/NavigationDrawer/investmentportfollio.dart';
 import 'package:etijar/UI/NavigationDrawer/notifications.dart';
+import 'package:etijar/UI/NavigationDrawer/security.dart';
 import 'package:etijar/UI/NavigationDrawer/watchlistempty.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -76,9 +78,15 @@ class DashBoard extends StatelessWidget {
                 SizedBox(height: space_between_title_textField,),
                 Text("My Account",style: TextStyle(color: Color(0xFF8692A6),fontWeight: FontWeight.w600,fontSize: SizeConfig.screenwidth*0.036),),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.security,"Security",(){}),
+                DrawerItem(Icons.security,"Security",(){
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>Security()));
+                }),
                 SizedBox(height: space_between_title_textField,),
-                DrawerItem(Icons.credit_card,"Cards & Banks",(){}),
+                DrawerItem(Icons.credit_card,"Cards & Banks",(){
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>CardsBanks()));
+                }),
                 SizedBox(height: space_between_title_textField,),
                 DrawerItem(Icons.people_outline,"Beneficiaries",(){
                   Navigator.pop(context);
