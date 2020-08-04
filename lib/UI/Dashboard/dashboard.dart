@@ -5,6 +5,7 @@ import 'package:etijar/UI/Dashboard/details.dart';
 import 'package:etijar/UI/NavigationDrawer/beneficiaries.dart';
 import 'package:etijar/UI/NavigationDrawer/cardsbanks.dart';
 import 'package:etijar/UI/NavigationDrawer/investmentportfollio.dart';
+import 'package:etijar/UI/NavigationDrawer/mysavings.dart';
 import 'package:etijar/UI/NavigationDrawer/notifications.dart';
 import 'package:etijar/UI/NavigationDrawer/security.dart';
 import 'package:etijar/UI/NavigationDrawer/watchlistempty.dart';
@@ -57,7 +58,8 @@ class DashBoard extends StatelessWidget {
                 }),
                 SizedBox(height: space_between_title_textField,),
                 DrawerItem(Icons.lightbulb_outline,"My Savings",(){
-
+                  Navigator.pop(context);
+                  Navigator.push(context, CupertinoPageRoute(builder: (context)=>MySavings()));
                 }),
                 SizedBox(height: space_between_title_textField,),
                 DrawerItem(Icons.card_travel,"Loans (Quad Hasn & Mudabarah)",(){}),

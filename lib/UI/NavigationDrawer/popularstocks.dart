@@ -1,3 +1,6 @@
+import 'package:etijar/UI/CustomWidget/ripplebutton.dart';
+import 'package:etijar/UI/NavigationDrawer/watchlistempty.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../allcolors.dart';
@@ -111,6 +114,12 @@ class PopularStocks extends StatelessWidget {
                   Divider(
                     color: Color(0xFF8692A6),
                   ),
+                  SizedBox(height: SizeConfig.screenwidth*0.35,),
+                  
+                  CustomButton("View Watchlist", (){
+                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>Watchlist()));
+
+                  },)
 
                 ],
               ),

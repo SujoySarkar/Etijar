@@ -144,14 +144,14 @@ class KycFour extends StatelessWidget {
                                         child: Column(
                                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                                           children: <Widget>[
-                                            CustomButton("Verify Account", (){
+                                            CustomButton("Create Pin", (){
                                               Navigator.push(context, CupertinoPageRoute(builder: (context)=>CreatePin()));
                                             }),
                                             GestureDetector(
                                               onTap: (){
                                                 Navigator.pop(context);
                                               },
-                                              child: Text("Not My Account",style: TextStyle(
+                                              child: Text("I'll do this later",style: TextStyle(
                                                   color: Colors.white,
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: SizeConfig.screenwidth*0.038),),

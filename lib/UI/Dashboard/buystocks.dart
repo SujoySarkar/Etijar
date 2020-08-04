@@ -243,6 +243,7 @@ class BuyStocks extends StatelessWidget {
                     height: SizeConfig.screenwidth*0.15,
                   ),
                   CustomButton("Proceed", (){
+
                     showModalBottomSheet(context: context,builder: (context){
 
                       return Container(

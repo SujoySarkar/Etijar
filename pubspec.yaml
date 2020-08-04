@@ -76,6 +76,8 @@ flutter:
     - images/netflix.png
     - images/fb.png
     - images/watchlist.png
+    - images/calendar.png
+    - images/failed.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

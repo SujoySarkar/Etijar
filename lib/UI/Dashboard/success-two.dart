@@ -5,17 +5,17 @@ import 'package:etijar/UI/CustomWidget/onboardingtitle.dart';
 import 'package:etijar/UI/CustomWidget/reusableCategories.dart';
 import 'package:etijar/UI/CustomWidget/reusableStocks.dart';
 import 'package:etijar/UI/CustomWidget/ripplebutton.dart';
-import 'package:etijar/UI/NavigationDrawer/popularstocks.dart';
+import 'package:etijar/UI/NavigationDrawer/mysavings.dart';
+import 'package:etijar/UI/NavigationDrawer/newplanstepone.dart';
 import 'package:etijar/UI/allstrings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../allcolors.dart';
 import '../sizeconfig.dart';
-import 'assetdetails.dart';
 import 'confirm.dart';
 
-class FirstSuccess extends StatelessWidget {
+class SecondSuccess extends StatelessWidget {
   double space_between_title_textField = SizeConfig.screenwidth * 0.025;
   double itemspace = SizeConfig.screenwidth * 0.035;
 
@@ -49,24 +49,24 @@ class FirstSuccess extends StatelessWidget {
                   height: SizeConfig.screenwidth * 0.04,
                 ),
                 OnboardingDscription(
-                    "Your stock purchase was"),
+                    "Your savings plan has been"),
                 OnboardingDscription(
-                    "successful!"),
+                    "created & locked."),
                 SizedBox(
                   height: SizeConfig.screenwidth * 0.2,
                 ),
-                CustomButton("Go to Portfolio", (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>AssetDetails()));
+                CustomButton("View Savings", (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MySavings()));
                 }),
                 SizedBox(
                   height: SizeConfig.screenwidth * 0.04,
                 ),
                 GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>PopularStocks()));
+                    Navigator.push(context, CupertinoPageRoute(builder: (context)=>NewPlanStepOne()));
                   },
                   child: Text(
-                    "View More Stocks",
+                    "Create New Plan",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,

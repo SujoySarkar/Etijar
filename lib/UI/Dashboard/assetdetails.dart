@@ -1,16 +1,15 @@
-import 'package:etijar/UI/CustomWidget/draweritem.dart';
-import 'package:etijar/UI/CustomWidget/reusableCategories.dart';
 import 'package:etijar/UI/CustomWidget/reusableStocks.dart';
-import 'package:etijar/UI/CustomWidget/ripplebutton.dart';
-import 'package:etijar/UI/allstrings.dart';
+import 'package:etijar/UI/Dashboard/withdrawbalance.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../allcolors.dart';
+import '../allstrings.dart';
 import '../sizeconfig.dart';
 import 'buystocks.dart';
+import 'details.dart';
 
-class Details extends StatelessWidget {
+class AssetDetails extends StatelessWidget {
   double space_between_title_textField = SizeConfig.screenwidth * 0.025;
   double itemspace = SizeConfig.screenwidth * 0.035;
   bool _value = false;
@@ -129,70 +128,70 @@ class Details extends StatelessWidget {
                   Row(
 
                     children: <Widget>[
-                     Container(
-                       height: SizeConfig.safeBlockHorizontal*9,
-                       width: SizeConfig.safeBlockVertical*9,
-                       child: Center(
-                         child: Text("Daily",style: TextStyle(
-                             color: Colors.blue,
-                             fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
-                         ),),
-                       ),
-                       decoration: BoxDecoration(
-                         color: Color(0xFF1F3151),
-                         borderRadius: BorderRadius.all(Radius.circular(SizeConfig.screenwidth*0.01),),
-                       ),
-                     ) ,
-                     Container(
-                       height: SizeConfig.safeBlockHorizontal*9,
-                       width: SizeConfig.safeBlockVertical*9,
-                       child: Center(
-                         child: Text("Months",style: TextStyle(
-                             color: Color(0xFF8692A6),
-                             fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
-                         ),),
-                       ),
+                      Container(
+                        height: SizeConfig.safeBlockHorizontal*9,
+                        width: SizeConfig.safeBlockVertical*9,
+                        child: Center(
+                          child: Text("Daily",style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
+                          ),),
+                        ),
+                        decoration: BoxDecoration(
+                          color: Color(0xFF1F3151),
+                          borderRadius: BorderRadius.all(Radius.circular(SizeConfig.screenwidth*0.01),),
+                        ),
+                      ) ,
+                      Container(
+                        height: SizeConfig.safeBlockHorizontal*9,
+                        width: SizeConfig.safeBlockVertical*9,
+                        child: Center(
+                          child: Text("Months",style: TextStyle(
+                              color: Color(0xFF8692A6),
+                              fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
+                          ),),
+                        ),
 
-                     ) ,
-                     Container(
-                       height: SizeConfig.safeBlockHorizontal*9,
-                       width: SizeConfig.safeBlockVertical*9,
-                       child: Center(
-                         child: Text("Quaters",style: TextStyle(
-                             color: Color(0xFF8692A6),
-                             fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
-                         ),),
-                       ),
+                      ) ,
+                      Container(
+                        height: SizeConfig.safeBlockHorizontal*9,
+                        width: SizeConfig.safeBlockVertical*9,
+                        child: Center(
+                          child: Text("Quaters",style: TextStyle(
+                              color: Color(0xFF8692A6),
+                              fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
+                          ),),
+                        ),
 
-                     ) ,
-                     Container(
-                       height: SizeConfig.safeBlockHorizontal*9,
-                       width: SizeConfig.safeBlockVertical*9,
-                       child: Center(
-                         child: Text("Halfs",style: TextStyle(
-                             color: Color(0xFF8692A6),
-                             fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
-                         ),),
-                       ),
+                      ) ,
+                      Container(
+                        height: SizeConfig.safeBlockHorizontal*9,
+                        width: SizeConfig.safeBlockVertical*9,
+                        child: Center(
+                          child: Text("Halfs",style: TextStyle(
+                              color: Color(0xFF8692A6),
+                              fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
+                          ),),
+                        ),
 
-                     ) ,
-                     Container(
-                       height: SizeConfig.safeBlockHorizontal*9,
-                       width: SizeConfig.safeBlockVertical*9,
-                       child: Center(
-                         child: Text("Tears",style: TextStyle(
-                             color: Color(0xFF8692A6),
-                             fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
-                         ),),
-                       ),
+                      ) ,
+                      Container(
+                        height: SizeConfig.safeBlockHorizontal*9,
+                        width: SizeConfig.safeBlockVertical*9,
+                        child: Center(
+                          child: Text("Tears",style: TextStyle(
+                              color: Color(0xFF8692A6),
+                              fontWeight: FontWeight.w400,fontSize: SizeConfig.screenwidth*0.028
+                          ),),
+                        ),
 
-                     ) ,
+                      ) ,
                     ],
                   ),
                   Container(
-                    height: SizeConfig.screenheight/5,
-                    width: SizeConfig.screenwidth,
-                    child: Image.asset("images/gp.png",fit: BoxFit.fill,)
+                      height: SizeConfig.screenheight/5,
+                      width: SizeConfig.screenwidth,
+                      child: Image.asset("images/gp.png",fit: BoxFit.fill,)
                   ),
                   Divider(
                     color: Color(0xFF8692A6),
@@ -450,51 +449,58 @@ class Details extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                  Container(
-                  height: SizeConfig.safeBlockVertical*7,
-                      width: SizeConfig.screenwidth/1.35,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF051F0E),
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                      child: Material(
-                          color: Color(0xFF478BFF),
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                          child: InkWell(
-                            onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>BuyStocks()));
-                            },
-                            splashColor: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            child: Center(
-                              child: Text(
-                                "Buy Stock",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize:SizeConfig.screenwidth*0.04
-                                ),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, CupertinoPageRoute(builder: (context)=>Withdrawbalance()));
+                        },
+                        child: Container(
+                            height: SizeConfig.safeBlockVertical*7,
+                            width: SizeConfig.screenwidth/2.5,
+                            decoration: BoxDecoration(
+
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              border: Border.all(color: Colors.blue,width: 2),
+                            ),
+                          child: Center(
+                            child: Text(
+                              "Withdraw Balance",
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize:SizeConfig.screenwidth*0.04
                               ),
                             ),
-                          ))),
-                  Container(
-                  height: SizeConfig.safeBlockVertical*7,
-                      width: SizeConfig.screenwidth/8,
-                      decoration: BoxDecoration(
-                        color: Color(0xFF051F0E),
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                      child: Material(
-                          color: Color(0xFF478BFF),
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                          child: InkWell(
-                            onTap: (){},
-                            splashColor: Colors.white,
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            child: Center(
-                              child: IconButton(icon: Icon(Icons.favorite_border,color: Colors.white,), onPressed: (){}),
+                          ),
                             ),
-                          ))),
+                      ),
+                      Container(
+                          height: SizeConfig.safeBlockVertical*7,
+                          width: SizeConfig.screenwidth/2.5,
+                          decoration: BoxDecoration(
+                            color: Color(0xFF051F0E),
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                          ),
+                          child: Material(
+                              color: Color(0xFF478BFF),
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              child: InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>BuyStocks()));
+                                },
+                                splashColor: Colors.white,
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                child: Center(
+                                  child: Text(
+                                    "Buy More",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize:SizeConfig.screenwidth*0.04
+                                    ),
+                                  ),
+                                ),
+                              ))),
+
 
                     ],
                   ),
@@ -510,8 +516,3 @@ class Details extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
